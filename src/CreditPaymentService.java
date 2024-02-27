@@ -1,7 +1,7 @@
 public class CreditPaymentService {
-    public int calculate(int n, int y, double p) {
-        double r = p / 100 / 12;
-        double index = n * ((r * Math.pow((1 + r), 12 * y)) / (Math.pow((1 + r), 12 * y) - 1));
+    public int calculate(int summa, int year, double percent) {
+        double monthlyPercentage = percent / 100 / 12;
+        double index = summa * ((monthlyPercentage * Math.pow((1 + monthlyPercentage), 12 * year)) / (Math.pow((1 + monthlyPercentage), 12 * year) - 1));
         int result = (int) index;
         return result;
     }
